@@ -1,0 +1,48 @@
+{
+  "name": "campusshield",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CampusShield - Campus Safety & Emergency Response System (DIU SE331 Assessment 2 prototype)",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n api,web -c red,blue \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "node server/index.js",
+    "dev:api:watch": "node --watch-path=server server/index.js",
+    "dev:web": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server/index.js",
+    "seed": "node server/seed/run.js",
+    "test:api": "node server/seed/smoke-test.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.453.0",
+    "mongoose": "^8.7.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
+    "react-router-dom": "^6.27.0",
+    "recharts": "^2.13.0",
+    "sonner": "^1.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.0.1",
+    "mongodb-memory-server-core": "^10.1.2",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.10"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
